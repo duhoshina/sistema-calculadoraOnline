@@ -1,38 +1,68 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Courier, monospace
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --font-branco: #f3f3f3;
+  --font-black: #0e0e0e;
+  --bg-color-orange: #F58610;
+  --bg-color-gray: #D7D7DA;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1, p {
+  color: var(--font-black);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container-flex {
+  height: 70vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column;
+  color: var(--font-branco);
+  justify-content: space-around;
 }
 
-.App-link {
-  color: #61dafb;
+.container-calculator {
+  background-color: var(--bg-color-gray);
+  width: 300px;
+  margin: 0px 46.5px;
+  height: 450px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container-numero {
+  height: 120px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 20px;
+  background-color: var(--font-black);
+}
+
+.container-btns {
+  height: 380px;
+}
+
+.container-numero h2 {
+  font-size: 5em;
+  margin-bottom: 10px;
+  font-weight: 300;
+}
+
+button {
+  width: 75px;
+  height: 75px;
+  margin: 0%;
+  cursor: pointer;
+}
+
+.orange {
+  background-color: var(--bg-color-orange);
+}
+
+[double='true']{
+  width: 150px;
 }
