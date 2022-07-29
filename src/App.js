@@ -52,9 +52,11 @@ function App() {
       setAntigo(numeroAtual)
       setAtual(0)
     } else if(input === '+/-'){
-      setAtual(numeroAtual / 100)
+      setAtual(numeroAtual * -1)
     } else if(input === '=') {
       Calcular()
+    } else if (input === '%') {
+      setAtual(numeroAtual / 100)
     } else if(numeroAtual === 0){
       setAtual(input)
     } else {
