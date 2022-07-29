@@ -29,21 +29,61 @@ function App() {
     {id: "18", content: '=', color: "gray"},
   ]
 
+  function Calcular(){
+
+    if(operador === '/'){
+      setAtual(numeroAntigo/numeroAtual)
+    } else if(operador === 'x'){
+      setAtual(numeroAntigo*numeroAtual)
+    } else if(operador === '+'){
+      setAtual(numeroAntigo+numeroAtual)
+    } else if(operador === '-'){
+      setAtual(numeroAntigo-numeroAtual)
+    }
+
+  }
+
+  document.addEventListener('keypress', (event) => {
+    switch(event.key){
+      case 'C': 
+        setAtual(0) 
+      break
+      case '0': 
+        setAtual(0) 
+      break
+      case '1': 
+        setAtual(1) 
+      break
+      case '2': 
+        setAtual(2) 
+      break
+      case '3': 
+        setAtual(3) 
+      break
+      case '4': 
+        setAtual(4) 
+      break
+      case '5': 
+        setAtual(5) 
+      break
+      case '6': 
+        setAtual(6) 
+      break
+      case '7': 
+        setAtual(7) 
+      break
+      case '8': 
+        setAtual(8) 
+      break
+      case '9': 
+        setAtual(1) 
+      break
+      default: break
+    }
+  })
+
   function CliqueBotao(event){
     const input = event.target.value
-
-    function Calcular(){
-      console.log(numeroAtual, numeroAntigo, operador)
-      if(operador === '/'){
-        setAtual(numeroAntigo/numeroAtual)
-      } else if(operador === 'x'){
-        setAtual(numeroAntigo*numeroAtual)
-      } else if(operador === '+'){
-        setAtual(numeroAntigo+numeroAtual)
-      } else if(operador === '-'){
-        setAtual(numeroAntigo-numeroAtual)
-      }
-    }
     
     if(input === 'C'){
       setAtual(0)
@@ -76,7 +116,7 @@ function App() {
           <div className="container-btns">
             <ul>
               {buttons.map((item, indice) => (
-                <button key={indice} className={item.color} value={item.content} onClick={CliqueBotao} double={item.double}>{item.content}</button>
+                <button key={indice} className={item.color} value={item.content} onClick={CliqueBotao} double={item.double} content={item.content}>{item.content}</button>
               ))}
             </ul>
           </div>
